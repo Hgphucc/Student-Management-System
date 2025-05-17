@@ -327,7 +327,7 @@ void menu_tim_kiem() {
               printf("Nhap MSSV: ");
               scanf("%s", mssv); getchar();
               SinhVien* sv = tim_theo_mssv(mssv);
-              if (sv) {
+              if (sv != NULL) {
                   hien_thi_danh_sach(sv);
               }
               else {
