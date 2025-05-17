@@ -19,7 +19,7 @@ void doc_file(const char* tenFile) {
 
     char dong[200];
     SinhVien sv;
-    while (fgets(dong, sizeof(dong), f)) {
+    while (fgets(dong, sizeof(dong), f) != NULL) {
         xoa_xuong_dong(dong);
         sscanf(dong, "%[^;];%[^;];%[^;];%f", sv.mssv, sv.hoTen, sv.lopHoc, &sv.GPA);
         them_sinh_vien(sv);
